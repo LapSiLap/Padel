@@ -20,7 +20,7 @@ function ScoreBoard(props: Props) {
         </div>
         { score1.points }
       </div>
-      <div className="Score">{ score2.points }</div>
+      <div className="Score">{ score2.points }!</div>
     </div>
   );
 }
