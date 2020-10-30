@@ -1,24 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from '@material-ui/core/Button';
+import Header from './Components/Header/Header';
+import ScoreBoard from './Components/Score/ScoreBoard';
+import useScore from './hooks/useScore';
 import './App.css';
 
 function App() {
+  const {
+    score1,
+    score2,
+    incScore,
+  } = useScore();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="Wrapper">
+      <div className="Content">
+        <Header />
+
+        <ScoreBoard score1={score1} score2={score2} />
+      </div>
+
+      <div className="Score-buttons">
+        <Button
+            size="small" 
+            variant="contained" 
+            color="secondary"
+            onClick={() => {
+              incScore(1);
+            }}
         >
-          Learn React
-        </a>
-      </header>
+            +1
+        </Button>
+
+        <Button
+            size="small" 
+            variant="contained" 
+            color="secondary"
+            onClick={() => {
+              incScore(2);
+            }}
+        >
+            +1
+        </Button>
+      </div>
     </div>
   );
 }
