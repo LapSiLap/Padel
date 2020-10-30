@@ -35,22 +35,6 @@
 	text-align: center;
 }
 
-.White-ball {
-	width:  9px;
-	height: 9px;
-	border: 1px solid #333;
-	border-radius: 100%;
-	margin: 2px;
-}
-
-.Red-ball {
-	width: 10px;
-	height: 10px;
-	background-color: #f50057;
-	border-radius: 100%;
-	margin: 2px;
-}
-
 .Ball-container {
 	display: flex;
 }

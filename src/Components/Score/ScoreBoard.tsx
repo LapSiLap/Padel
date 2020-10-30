@@ -1,4 +1,5 @@
 import React from 'react';
+import Ball from './Ball';
 import { Score } from './Score';
 
 interface Props {
@@ -13,14 +14,14 @@ function ScoreBoard(props: Props) {
     <div className="Score-board">
       <div className="Score">
         <div className="Ball-container">
-            <div className="Red-ball" /><div className="Red-ball" /><div className="Red-ball" />
+            <Ball color="red" />
         </div>
         <div className="Ball-container">
-            <div className="White-ball" /><div className="White-ball" /><div className="White-ball" /><div className="White-ball" /><div className="White-ball" /><div className="White-ball" />
+            <Ball color="white" />
         </div>
         { score1.points }
       </div>
-      <div className="Score">{ score2.points }!</div>
+      <div className="Score">{ score2.points }</div>
     </div>
   );
 }
