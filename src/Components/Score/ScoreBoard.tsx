@@ -11,25 +11,14 @@ function ScoreBoard(props: Props) {
   const { score1, score2 } = props;
 
   return (
-    <div className="Score-board">
-      <div className="Score">
-        <div className="Ball-container">
-            <Ball color="red" />
-        </div>
-        <div className="Ball-container">
-            <Ball color="white" />
-        </div>
-        { score1.points }
-      </div>
-      <div className="Score">
-        <div className="Ball-container">
-            <Ball color="red" />
-        </div>
-        <div className="Ball-container">
-            <Ball color="white" />
-        </div>
-        { score2.points }
-      </div>
+    <div>
+      {
+        JSON.stringify(score1)
+      }
+      <br />
+      {
+        JSON.stringify(score2)
+      }
     </div>
   );
 }

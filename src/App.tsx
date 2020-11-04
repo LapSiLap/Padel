@@ -37,6 +37,9 @@ function App() {
             : <Button color="primary" variant="contained" onClick={() => { setGameStarted(true) }}>Start game</Button>
         }        
       </div>
+
+      <Button onClick={() => incScore(1)}>1</Button>
+      <Button onClick={() => incScore(2)}>2</Button>
     </div>
   );
 }
