@@ -8,6 +8,14 @@ const points = [
   '40'
 ];
 
+function speak(text: string) {
+  /*
+  const msg = new SpeechSynthesisUtterance();
+  msg.text = text.replace('A', 'Advantage');
+  window.speechSynthesis.speak(msg);
+  */
+}
+
 const numberOfSets = 6;
 
 function getPointsString(points1: number, points2: number) : string {
@@ -59,6 +67,8 @@ function useScore() {
     } else if (pointsWinsOver(points2, points1)) {
       setGames2(g => g + 1)
       resetPoints();
+    } else {
+      speak(`${getPointsString(points1, points2)} ${getPointsString(points2, points1)}`)
     }
   }, [points1, points2])
 
