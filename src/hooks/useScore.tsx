@@ -15,7 +15,7 @@ function getPointsString(points1: number, points2: number) : string {
     if (points1 === points2) {
       return points[3];
     }
-    return points1 >= points2 ? 'ADV' : points[3];
+    return points1 >= points2 ? 'A' : points[3];
   }
 
   return points[points1];
